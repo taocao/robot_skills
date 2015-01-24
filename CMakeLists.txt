@@ -28,6 +28,7 @@ find_package(catkin REQUIRED COMPONENTS
     tue_recorder
     cb_planner_msgs_srvs
     obj_in_gripper
+    ed
 )
 
 catkin_python_setup()
