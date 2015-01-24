@@ -33,4 +33,6 @@ script:
   - catkin_make install   # installing the package
   - catkin_make tests     # build the tests
   - catkin_make run_tests # and run them
+  - roscd robot_skills    # Go to the actual package after we cd-ed away from it
+  - nosetests --with-doctest #And run nose+doctests in the package
                                             

@@ -27,6 +27,7 @@ find_package(catkin REQUIRED COMPONENTS
     octomap_msgs
     tue_recorder
     cb_planner_msgs_srvs
+    obj_in_gripper
 )
 
 catkin_python_setup()
