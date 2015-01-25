@@ -29,6 +29,8 @@ find_package(catkin REQUIRED COMPONENTS
     cb_planner_msgs_srvs
     obj_in_gripper
     ed
+    tue_manipulation
+    dragonfly_speech_recognition
 )
 
 catkin_python_setup()
