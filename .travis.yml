@@ -7,6 +7,8 @@ compiler:
   - gcc
 env:
   - ROS_DISTRO=hydro
+notifications:
+  - email: false
 
 before_install:
   - export CI_SOURCE_PATH=$(pwd)
@@ -29,8 +31,9 @@ before_script:
   - cd .. # go to the catkin workspace
 
 script:
-  - catkin_make ed_generate_messages_py
-  - catkin_make psi_generate_messages_py
-  - catkin_make ; echo "Ignore possibly failed catkin_make"
+  - catkin_make
+  - catkin_make install   # installing the package
+  - catkin_make tests     # build the tests
+  - catkin_make run_tests # and run them
   - roscd robot_skills    # Go to the actual package after we cd-ed away from it
   - nosetests --with-doctest #And run nose+doctests in the package
