@@ -33,4 +33,7 @@ script:
   - catkin_make install   # installing the package
   - catkin_make tests     # build the tests
   - catkin_make run_tests # and run them
-                                            
+  - roscore > /dev/null & #Run a roscore in the background
+  - rosrun robot_skills robot.py
+  - rosrun robot_skills msg_constructors.py
+  - rosrun robot_skills mocked_robot.py
